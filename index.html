@@ -25,8 +25,8 @@
       </div>
     </div>
     <div class="flex items-center gap-3">
-      <span id="current-day-badge" class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-3 py-1 rounded-lg font-mono">
-        Tag 01 & Tag 02 Bereit 🟢
+      <span id="current-day-badge" class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-lg font-mono">
+        Tag 01, 02 & 03 Aktiv 🟢
       </span>
       <span class="text-xs text-slate-400 font-mono">Semester I / VIII</span>
     </div>
@@ -40,13 +40,17 @@
       <div class="glass-card rounded-2xl p-5 shadow-lg">
         <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4">📚 Themenauswahl</h2>
         <nav class="space-y-2">
-          <button onclick="showSection('day1')" id="nav-day1" class="w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium transition bg-blue-600 text-white flex items-center justify-between">
+          <button onclick="showSection('day1')" id="nav-day1" class="w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium transition text-slate-300 hover:bg-slate-800 flex items-center justify-between">
             <span>📖 Tag 01: Milchchemie</span>
-            <span class="text-[10px] bg-blue-700/60 px-1.5 py-0.5 rounded">Phasen</span>
+            <span class="text-[10px] bg-slate-700 px-1.5 py-0.5 rounded">Phasen</span>
           </button>
           <button onclick="showSection('day2')" id="nav-day2" class="w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium transition text-slate-300 hover:bg-slate-800 flex items-center justify-between">
             <span>🔬 Tag 02: Mikrobiologie</span>
-            <span class="text-[10px] bg-emerald-600/60 text-white px-1.5 py-0.5 rounded">Neu ✨</span>
+            <span class="text-[10px] bg-slate-700 px-1.5 py-0.5 rounded">Gram</span>
+          </button>
+          <button onclick="showSection('day3')" id="nav-day3" class="w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium transition bg-amber-600 text-white flex items-center justify-between">
+            <span>🧈 Tag 03: Milchfett & MFGM</span>
+            <span class="text-[10px] bg-amber-700/80 text-white px-1.5 py-0.5 rounded">Neu ✨</span>
           </button>
           <button onclick="showSection('syllabus')" id="nav-syllabus" class="w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium transition text-slate-300 hover:bg-slate-800 flex items-center justify-between">
             <span>🗓️ Vollständiger Lehrplan</span>
@@ -65,14 +69,16 @@
 
       <!-- Sharing Info Box -->
       <div class="glass-card rounded-2xl p-5 border-amber-500/20 bg-amber-950/20">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">🌐 Wie kann ich das teilen?</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">🌐 Live auf GitHub teilen</h3>
         <p class="text-xs text-slate-300 leading-relaxed mb-3">
-          Diese Seite läuft aktuell offline auf deinem PC. Um sie mit Freunden oder Kommilitonen zu teilen:
+          Lade deine Notizen mit 1 Klick auf GitHub hoch:
         </p>
-        <ul class="text-[11px] space-y-1.5 text-slate-300 list-disc list-inside">
-          <li><b>Option 1:</b> Als ZIP-Datei packen und per WhatsApp/Drive senden.</li>
-          <li><b>Option 2:</b> Kostenlos auf <b>GitHub Pages</b> hochladen für einen echten weltweiten Link (<code>https://...</code>).</li>
-        </ul>
+        <code class="block text-xs bg-slate-900 border border-slate-700 p-2 rounded-lg text-amber-300 font-mono mb-2">
+          PUBLISH_TO_GITHUB.bat
+        </code>
+        <p class="text-[11px] text-slate-400">
+          Dein Link: <code>sahuayush702-debug.github.io/btech-in-german/</code>
+        </p>
       </div>
 
       <!-- File Locations info box -->
@@ -82,7 +88,7 @@
           D:\B.tech in german\
         </code>
         <p class="text-[11px] text-slate-400">
-          Notizen, Grafiken & Flashcards sind dauerhaft auf deiner Festplatte gespeichert.
+          Dauerhaft gespeichert mit Vorlesungsnotizen & Flashcards.
         </p>
       </div>
     </aside>
@@ -91,98 +97,155 @@
     <main class="lg:col-span-3 space-y-6">
 
       <!-- ========================================================= -->
-      <!-- SECTION: DAY 1 LESSON (PHYSICAL CHEMISTRY OF MILK)        -->
+      <!-- SECTION: DAY 3 LESSON (MILK FAT & HOMOGENIZATION) - ACTIVE -->
       <!-- ========================================================= -->
-      <div id="section-day1" class="space-y-6">
+      <div id="section-day3" class="space-y-6">
         
         <!-- Header Banner -->
-        <div class="glass-card rounded-3xl p-6 bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/30">
-          <div class="flex items-center gap-2 text-xs font-semibold text-blue-400 mb-2 uppercase tracking-wider">
-            <span>Semester I • Physikalische Chemie der Milch</span>
+        <div class="glass-card rounded-3xl p-6 bg-gradient-to-r from-amber-950/60 to-slate-900 border border-amber-500/30">
+          <div class="flex items-center gap-2 text-xs font-semibold text-amber-400 mb-2 uppercase tracking-wider">
+            <span>Semester I • Physikalische Chemie der Milch • Lektion 03</span>
           </div>
           <h2 class="text-2xl font-black text-white mb-2">
-            Lektion 01: Zusammensetzung & das kolloidale Mehrphasensystem
+            Lektion 03: Das Milchfettkügelchen, die MFGM & die Hochdruckhomogenisierung
           </h2>
           <p class="text-sm text-slate-300">
-            Lerne die Zusammensetzung der Milch, die 3 physikalischen Zustände (Emulsion, Kolloid, echte Lösung) und Stokes' Aufrahmgesetz.
+            Milk Fat Globule Architecture (MFGM Trilayer), High-Pressure Valve Mechanics (150–250 bar), Interfacial Casein Adsorption & Prevention of Lipolytic Rancidity.
           </p>
         </div>
 
-        <!-- Microstructure Image Card -->
+        <!-- Microstructure & Process Image Card -->
         <div class="glass-card rounded-3xl p-6 shadow-xl space-y-4">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
             <h3 class="text-lg font-bold text-white flex items-center gap-2">
-              <span>🖼️</span> Mikrostruktur-Diagramm (Microstructural Infographic)
+              <span>🖼️</span> Wissenschaftliche Infografik (MFG & Homogenization Infographic)
             </h3>
-            <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">Abbildung 1.1</span>
+            <span class="text-xs bg-amber-900/60 text-amber-300 px-3 py-1 rounded-full border border-amber-500/30">Abbildung 3.1</span>
           </div>
           <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 flex justify-center">
-            <img src="assets/images/milk_microstructure.jpg" alt="Mikrostruktur der Milch" class="w-full max-h-[550px] object-contain">
+            <img src="assets/images/mfgm_homogenization.jpg" alt="Milchfettkügelchen und Homogenisierung" class="w-full max-h-[580px] object-contain">
           </div>
+          <p class="text-xs text-slate-400 italic text-center">
+            Abbildung 3.1: (1) Natives Milchfettkügelchen mit Dreischichten-MFGM, (2) Homogenisierventil unter 200 bar Hochdruck mit Kavitation & Scherung, (3) Rekonstituierte Fettkügelchen (< 1 µm) überzogen mit Kaseinmizellen.
+          </p>
         </div>
 
-        <!-- 3 Phases Interactive Explorer -->
+        <!-- MFGM Trilayer Details Card -->
         <div class="glass-card rounded-3xl p-6 shadow-xl space-y-4">
           <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <span>🔬</span> Die drei physikalischen Phasen (The Three Physical States)
+            <span>🔬</span> Die Dreischichten-Architektur der MFGM (Trilayer Structure)
           </h3>
-          <div class="grid grid-cols-3 gap-2 p-1.5 bg-slate-900 rounded-xl border border-slate-800">
-            <button onclick="setPhase(0)" id="tab-btn-0" class="py-2 px-3 text-xs md:text-sm font-semibold rounded-lg bg-blue-600 text-white transition">
-              1. Emulsion 🧈
-            </button>
-            <button onclick="setPhase(1)" id="tab-btn-1" class="py-2 px-3 text-xs md:text-sm font-medium rounded-lg text-slate-400 hover:text-white transition">
-              2. Kolloid 🧪
-            </button>
-            <button onclick="setPhase(2)" id="tab-btn-2" class="py-2 px-3 text-xs md:text-sm font-medium rounded-lg text-slate-400 hover:text-white transition">
-              3. Echte Lösung 💧
-            </button>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div class="p-4 bg-slate-900/90 border border-slate-800 rounded-2xl space-y-2">
+              <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-mono">1. Innere Monoschicht</span>
+              <h4 class="text-sm font-bold text-white">Endoplasmatisches Retikulum</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Direkt auf dem Triglyceridkern. Besteht aus polaren Lipiden und spezifischen Strukturproteinen der Euterzelle.
+              </p>
+            </div>
+            <div class="p-4 bg-slate-900/90 border border-slate-800 rounded-2xl space-y-2">
+              <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded font-mono">2. Zwischenschicht</span>
+              <h4 class="text-sm font-bold text-white">Dichte Proteinmatrix</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Elektronendichtes Geflecht aus <b>Butyrophilin (BTN)</b> und dem Enzym <b>Xanthinoxidase (XO)</b>.
+              </p>
+            </div>
+            <div class="p-4 bg-slate-900/90 border border-slate-800 rounded-2xl space-y-2">
+              <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono">3. Äußere Doppelschicht</span>
+              <h4 class="text-sm font-bold text-white">Plasmamembran</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Phospholipide (Sphingomyelin, Phosphatidylcholin) und negativ geladene Glykoproteine (<b>Lactadherin / PAS 6/7</b>), die Koaleszenz verhindern.
+              </p>
+            </div>
           </div>
-          <div id="phase-detail-box" class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-4"></div>
         </div>
 
-        <!-- Quiz Section -->
+        <!-- Homogenization Engineering Principles -->
         <div class="glass-card rounded-3xl p-6 shadow-xl space-y-4">
           <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <span>🧠</span> Tag 01 Quiz & Recall Check
+            <span>⚙️</span> Das Homogenisierungs-Prinzip (Engineering & Rheology)
+          </h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
+              <h4 class="text-sm font-bold text-amber-400">Warum 2 Stufen im Homogenisator?</h4>
+              <ul class="text-xs space-y-2 text-slate-300">
+                <li>• <b>1. Stufe (150 – 200 bar):</b> Extrem hohe Scherung, Kavitation und Turbulenz zerschlagen die großen Fettkügelchen ($3{,}5\ \mu\text{m} \rightarrow < 1\ \mu\text{m}$). Dabei entstehen jedoch zusammenhängende <i>Cluster</i> (Fettklumpen).</li>
+                <li>• <b>2. Stufe (30 – 50 bar):</b> Geringerer Druck bricht die verklumpten Cluster auf und garantiert eine gleichmäßige Verteilung der Tröpfchen.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
+              <h4 class="text-sm font-bold text-blue-400">Die Grenzflächenexplosion</h4>
+              <ul class="text-xs space-y-2 text-slate-300">
+                <li>• Die Fettoberfläche steigt von <b>$80\ \text{m}^2/\text{L}$ auf $350\ \text{m}^2/\text{L}$</b> an!</li>
+                <li>• Weil native MFGM nicht ausreicht, adsorbieren <b>Kaseinmizellen</b> und <b>Molkenproteine</b> sofort an die Fett-Wasser-Grenzfläche.</li>
+                <li>• Homogenisiertes Fett verhält sich wie ein Pseudoprotein $\rightarrow$ homogenisierte Milch rahmt nicht mehr auf!</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Danger Box -->
+          <div class="p-4 rounded-2xl bg-rose-950/40 border border-rose-500/40 space-y-2">
+            <div class="flex items-center gap-2 text-rose-400 font-bold text-xs uppercase tracking-wider">
+              <span>⚠️ Molkereiprüfung: Gefahr der Lipolyse</span>
+            </div>
+            <p class="text-xs text-slate-200 leading-relaxed">
+              Rohmilch enthält das Enzym <b>Lipoproteinlipase (LPL)</b>. Wenn Rohmilch ohne vorherige oder gleichzeitige Erhitzung geschert wird, zerstört man die MFGM. Die Lipase spaltet sofort Triglyceride in <b>freie Fettsäuren (Buttersäure)</b> $\rightarrow$ die Milch wird innerhalb von 10 Minuten ungenießbar ranzig! Daher gilt in jeder Molkerei: <b>Homogenisierung IMMER bei 60–75 °C gekoppelt mit Pasteurisierung durchführen!</b>
+            </p>
+          </div>
+        </div>
+
+        <!-- Day 3 Quiz -->
+        <div class="glass-card rounded-3xl p-6 shadow-xl space-y-4">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <span>🧠</span> Tag 03 Quiz & Selbsttest
           </h3>
           <div class="space-y-3">
             <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
-              <p class="text-sm font-medium text-slate-200 mb-2">1. <b>Grammatik:</b> Welcher Artikel gehört zu <code>Emulsion</code>, <code>Kasein</code>, <code>Fettkügelchen</code>?</p>
-              <button onclick="toggleAnswer('q1')" class="text-xs bg-slate-800 hover:bg-slate-700 text-blue-400 px-3 py-1.5 rounded-lg transition">Antwort anzeigen / verbergen</button>
-              <div id="ans-q1" class="hidden mt-2 text-xs text-emerald-400 bg-emerald-950/30 border border-emerald-500/20 p-2.5 rounded-lg">
-                ✅ <b>die</b> Emulsion, <b>das</b> Kasein, <b>das</b> Fettkügelchen (-chen ist immer neutral!).
+              <p class="text-sm font-medium text-slate-200 mb-2">1. <b>Verfahrenstechnik:</b> Warum sinkt die Aufrahmgeschwindigkeit bei Verkleinerung des Durchmessers um das 4-fache gleich um das 16-fache?</p>
+              <button onclick="toggleAnswer('q3-1')" class="text-xs bg-slate-800 hover:bg-slate-700 text-amber-400 px-3 py-1.5 rounded-lg transition">Antwort anzeigen / verbergen</button>
+              <div id="ans-q3-1" class="hidden mt-2 text-xs text-emerald-400 bg-emerald-950/30 border border-emerald-500/20 p-2.5 rounded-lg">
+                ✅ Nach dem <b>Stokes'schen Gesetz</b> ist die Aufrahmgeschwindigkeit proportional zum <b>Quadrat des Radius ($v \propto r^2$)</b>. Halbiert sich der Radius, sinkt die Geschwindigkeit um das 4-fache; viertelt sich der Radius, sinkt sie um das 16-fache ($4^2 = 16$).
               </div>
             </div>
+
             <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
-              <p class="text-sm font-medium text-slate-200 mb-2">2. <b>Optik:</b> Warum ist Milch weiß?</p>
-              <button onclick="toggleAnswer('q2')" class="text-xs bg-slate-800 hover:bg-slate-700 text-blue-400 px-3 py-1.5 rounded-lg transition">Antwort anzeigen / verbergen</button>
-              <div id="ans-q2" class="hidden mt-2 text-xs text-emerald-400 bg-emerald-950/30 border border-emerald-500/20 p-2.5 rounded-lg">
-                ✅ Wegen der <b>Lichtstreuung (Tyndall-Effekt)</b> an Kaseinmizellen und Fettkügelchen.
+              <p class="text-sm font-medium text-slate-200 mb-2">2. <b>Proteinbiochemie:</b> Was bildet die neue Membran der Fettkügelchen nach der Hochdruckhomogenisierung?</p>
+              <button onclick="toggleAnswer('q3-2')" class="text-xs bg-slate-800 hover:bg-slate-700 text-amber-400 px-3 py-1.5 rounded-lg transition">Antwort anzeigen / verbergen</button>
+              <div id="ans-q3-2" class="hidden mt-2 text-xs text-emerald-400 bg-emerald-950/30 border border-emerald-500/20 p-2.5 rounded-lg">
+                ✅ <b>Kaseinmizellen</b> (bzw. Kasein-Submizellen) und <b>Molkenproteine</b> aus der wässrigen Phase (Serum). Sie adsorbieren spontan an die hydrophobe Fettoberfläche und stabilisieren die Emulsion.
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+              <p class="text-sm font-medium text-slate-200 mb-2">3. <b>Qualitätssicherung:</b> Welches Enzym führt bei Zerstörung der MFGM zu sofortigem ranzigen Geschmack?</p>
+              <button onclick="toggleAnswer('q3-3')" class="text-xs bg-slate-800 hover:bg-slate-700 text-amber-400 px-3 py-1.5 rounded-lg transition">Antwort anzeigen / verbergen</button>
+              <div id="ans-q3-3" class="hidden mt-2 text-xs text-emerald-400 bg-emerald-950/30 border border-emerald-500/20 p-2.5 rounded-lg">
+                ✅ Die <b>Lipoproteinlipase (LPL)</b>. Sie hydrolysiert Triglyceride zu freien Fettsäuren wie Buttersäure und Capronsäure.
               </div>
             </div>
           </div>
         </div>
 
-        <!-- NEXT TOPIC BUTTON -->
-        <div class="flex justify-end pt-4">
-          <button onclick="showSection('day2')" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm shadow-lg flex items-center gap-2 transition transform hover:scale-[1.02]">
-            <span>Weiter zu Tag 02: Grundlagen der Mikrobiologie</span>
-            <span>➡️</span>
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between pt-4">
+          <button onclick="showSection('day2')" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-sm flex items-center gap-2 transition">
+            <span>⬅️ Zurück zu Tag 02 (Mikrobiologie)</span>
           </button>
+          <span class="text-xs text-emerald-400 self-center font-mono">Tag 03 Aktiv ✅</span>
         </div>
 
       </div>
-
 
       <!-- ========================================================= -->
       <!-- SECTION: DAY 2 LESSON (FUNDAMENTALS OF MICROBIOLOGY)      -->
       <!-- ========================================================= -->
       <div id="section-day2" class="hidden space-y-6">
 
-        <!-- Header Banner -->
         <div class="glass-card rounded-3xl p-6 bg-gradient-to-r from-emerald-950/60 to-slate-900 border border-emerald-500/30">
           <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-2 uppercase tracking-wider">
-            <span>Semester I • Grundlagen der Mikrobiologie</span>
+            <span>Semester I • Grundlagen der Mikrobiologie • Lektion 02</span>
           </div>
           <h2 class="text-2xl font-black text-white mb-2">
             Lektion 02: Bakterienzellstruktur, Gram-Färbung & Rohmilchflora
@@ -192,7 +255,6 @@
           </p>
         </div>
 
-        <!-- Microbiology Image Card -->
         <div class="glass-card rounded-3xl p-6 shadow-xl space-y-4">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
             <h3 class="text-lg font-bold text-white flex items-center gap-2">
@@ -203,116 +265,6 @@
           <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 flex justify-center">
             <img src="assets/images/dairy_microbiology.jpg" alt="Mikrobiologie der Milch" class="w-full max-h-[550px] object-contain">
           </div>
-          <p class="text-xs text-slate-400 italic text-center">
-            Abbildung 2.1: Zellwandaufbau (Gram-positiv vs. Gram-negativ), Bakterienformen in Milch und Gram-Differenzierung.
-          </p>
-        </div>
-
-        <!-- Gram Comparison Table -->
-        <div class="glass-card rounded-3xl p-6 shadow-xl space-y-4">
-          <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <span>⚖️</span> Der fundamentale Vergleich: Gram-Positiv vs. Gram-Negativ
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Gram Positive -->
-            <div class="p-5 rounded-2xl bg-indigo-950/30 border border-indigo-500/30 space-y-3">
-              <div class="flex items-center justify-between">
-                <h4 class="font-bold text-indigo-400 text-base">Gram-Positiv (Blau/Violett)</h4>
-                <span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded">Dicke Zellwand</span>
-              </div>
-              <ul class="text-xs space-y-2 text-slate-300">
-                <li>• <b>Zellwand:</b> Dicke Mureinschicht (20–80 nm Peptidoglykan) mit Teichonsäuren.</li>
-                <li>• <b>Reaktion:</b> Hält Kristallviolett-Iod nach der Entfärbung fest $\rightarrow$ bleibt violett.</li>
-                <li>• <b>Milchwirtschaftliche Bedeutung:</b>
-                  <div class="mt-1 p-2 bg-slate-900 rounded-lg text-slate-200">
-                    🟢 <b>Milchsäurebakterien (LAB):</b> <i>Lactococcus lactis</i>, <i>Lactobacillus bulgaricus</i> (Gärung).<br>
-                    ⚠️ <b>Sporenbildner:</b> <i>Bacillus cereus</i>, <i>Clostridium</i> (Hitzeresistente Sporen).
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Gram Negative -->
-            <div class="p-5 rounded-2xl bg-rose-950/30 border border-rose-500/30 space-y-3">
-              <div class="flex items-center justify-between">
-                <h4 class="font-bold text-rose-400 text-base">Gram-Negativ (Rot/Rosa)</h4>
-                <span class="text-xs bg-rose-500/20 text-rose-300 px-2 py-0.5 rounded">Äußere Membran</span>
-              </div>
-              <ul class="text-xs space-y-2 text-slate-300">
-                <li>• <b>Zellwand:</b> Dünne Mureinschicht (2–7 nm) + Lipid-Außenmembran mit Lipopolysacchariden (LPS).</li>
-                <li>• <b>Reaktion:</b> Alkohol löst Lipide auf $\rightarrow$ Farbstoff wäscht aus $\rightarrow$ gegengefärbt mit Safranin zu rot/rosa.</li>
-                <li>• <b>Milchwirtschaftliche Bedeutung:</b>
-                  <div class="mt-1 p-2 bg-slate-900 rounded-lg text-slate-200">
-                    🔴 <b>Indikatorkeime:</b> <i>Escherichia coli</i>, Coliforme (Hygienemangel).<br>
-                    ❄️ <b>Psychrotrophe:</b> <i>Pseudomonas</i> (Wachsen bei 4 °C im Kühltank und bilden hitzestabile Lipasen!).
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Heat Treatments & Spores in Dairy Plant -->
-        <div class="glass-card rounded-3xl p-6 shadow-xl space-y-4">
-          <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <span>🏭</span> Molkereitechnologie: Hitzebehandlung zur Keimabtötung
-          </h3>
-          <div class="overflow-x-auto">
-            <table class="w-full text-left text-sm border-collapse">
-              <thead>
-                <tr class="border-b border-slate-800 text-xs font-semibold text-slate-400 uppercase">
-                  <th class="py-3 px-4">Verfahren (Process)</th>
-                  <th class="py-3 px-4">Temperatur & Haltezeit</th>
-                  <th class="py-3 px-4">Wirkung auf Keime</th>
-                  <th class="py-3 px-4">Typisches Produkt</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-800/60 text-slate-300 text-xs md:text-sm">
-                <tr class="hover:bg-slate-800/30">
-                  <td class="py-3 px-4 font-semibold text-white">Thermisation</td>
-                  <td class="py-3 px-4 font-mono text-amber-400">60 – 65 °C (15–20 s)</td>
-                  <td class="py-3 px-4">Senkt Keimzahl vor der Käserei; Enzyme bleiben aktiv</td>
-                  <td class="py-3 px-4">Rohmilchkäse-Vorbereitung</td>
-                </tr>
-                <tr class="hover:bg-slate-800/30">
-                  <td class="py-3 px-4 font-semibold text-white">Kurzzeiterhitzung (KZE / HTST)</td>
-                  <td class="py-3 px-4 font-mono text-emerald-400">72 – 75 °C (15–30 s)</td>
-                  <td class="py-3 px-4">Tötet alle vegetativen Krankheitserreger (Tuberkulose, Listerien)</td>
-                  <td class="py-3 px-4">Frische pasteurisierte Konsummilch</td>
-                </tr>
-                <tr class="hover:bg-slate-800/30">
-                  <td class="py-3 px-4 font-semibold text-white">Ultrahocherhitzung (UHT)</td>
-                  <td class="py-3 px-4 font-mono text-rose-400">135 – 150 °C (2–4 s)</td>
-                  <td class="py-3 px-4">Kommerzielle Sterilität: Zerstört auch bakterielle Endosporen!</td>
-                  <td class="py-3 px-4">H-Milch (Dauerhaltbare Milch)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Day 2 Quiz -->
-        <div class="glass-card rounded-3xl p-6 shadow-xl space-y-4">
-          <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <span>🧠</span> Tag 02 Quiz & Selbsttest
-          </h3>
-          <div class="space-y-3">
-            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
-              <p class="text-sm font-medium text-slate-200 mb-2">1. <b>Gram-Status:</b> Zu welcher Gruppe (Gram-positiv oder Gram-negativ) gehören die nützlichen Milchsäurebakterien wie <i>Lactococcus lactis</i>?</p>
-              <button onclick="toggleAnswer('q2-1')" class="text-xs bg-slate-800 hover:bg-slate-700 text-emerald-400 px-3 py-1.5 rounded-lg transition">Antwort anzeigen / verbergen</button>
-              <div id="ans-q2-1" class="hidden mt-2 text-xs text-emerald-400 bg-emerald-950/30 border border-emerald-500/20 p-2.5 rounded-lg">
-                ✅ Sie sind <b>Gram-positiv</b> (färben sich blau/violett) und besitzen eine dicke schützende Peptidoglykan-Zellwand.
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
-              <p class="text-sm font-medium text-slate-200 mb-2">2. <b>Betriebsrisiko:</b> Warum wachsen Pseudomonas-Bakterien selbst im Kühltank bei 4 °C und warum sind sie gefährlich?</p>
-              <button onclick="toggleAnswer('q2-2')" class="text-xs bg-slate-800 hover:bg-slate-700 text-emerald-400 px-3 py-1.5 rounded-lg transition">Antwort anzeigen / verbergen</button>
-              <div id="ans-q2-2" class="hidden mt-2 text-xs text-emerald-400 bg-emerald-950/30 border border-emerald-500/20 p-2.5 rounded-lg">
-                ✅ Sie sind <b>psychrotroph</b> (kälteliebend). Sie scheiden hitzestabile Lipasen und Proteasen aus, die die Pasteurisierung überleben und nach Wochen bitteren Geschmack in abgepackter Milch erzeugen!
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- Navigation Buttons -->
@@ -320,7 +272,47 @@
           <button onclick="showSection('day1')" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-sm flex items-center gap-2 transition">
             <span>⬅️ Zurück zu Tag 01 (Milchchemie)</span>
           </button>
-          <span class="text-xs text-slate-500 self-center">Tag 02 abgeschlossen ✅</span>
+          <button onclick="showSection('day3')" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-sm shadow-lg flex items-center gap-2 transition transform hover:scale-[1.02]">
+            <span>Weiter zu Tag 03: Milchfett & Homogenisierung ➡️</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- SECTION: DAY 1 LESSON (PHYSICAL CHEMISTRY OF MILK)        -->
+      <!-- ========================================================= -->
+      <div id="section-day1" class="hidden space-y-6">
+        
+        <div class="glass-card rounded-3xl p-6 bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/30">
+          <div class="flex items-center gap-2 text-xs font-semibold text-blue-400 mb-2 uppercase tracking-wider">
+            <span>Semester I • Physikalische Chemie der Milch • Lektion 01</span>
+          </div>
+          <h2 class="text-2xl font-black text-white mb-2">
+            Lektion 01: Zusammensetzung & das kolloidale Mehrphasensystem
+          </h2>
+          <p class="text-sm text-slate-300">
+            Lerne die Zusammensetzung der Milch, die 3 physikalischen Zustände (Emulsion, Kolloid, echte Lösung) und Stokes' Aufrahmgesetz.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 shadow-xl space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <span>🖼️</span> Mikrostruktur-Diagramm
+            </h3>
+            <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">Abbildung 1.1</span>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 flex justify-center">
+            <img src="assets/images/milk_microstructure.jpg" alt="Mikrostruktur der Milch" class="w-full max-h-[550px] object-contain">
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-end pt-4">
+          <button onclick="showSection('day2')" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm shadow-lg flex items-center gap-2 transition transform hover:scale-[1.02]">
+            <span>Weiter zu Tag 02: Grundlagen der Mikrobiologie ➡️</span>
+          </button>
         </div>
 
       </div>
@@ -336,8 +328,8 @@
             <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800">
               <h3 class="font-bold text-blue-400 text-sm mb-2">Semester I (Aktuell)</h3>
               <ul class="text-xs space-y-1.5 text-slate-300">
-                <li>• <b>Physikalische Chemie der Milch</b> (Physical Chemistry of Milk) - ✅ Tag 01</li>
-                <li>• <b>Grundlagen der Mikrobiologie</b> (Fundamentals of Microbiology) - ✅ Tag 02</li>
+                <li>• <b>Physikalische Chemie der Milch</b> - ✅ Tag 01 & Tag 03</li>
+                <li>• <b>Grundlagen der Mikrobiologie</b> - ✅ Tag 02</li>
                 <li>• <b>Thermodynamik</b> (Thermodynamics) - ⏳ Tag 04</li>
                 <li>• <b>Strömungsmechanik</b> (Fluid Mechanics)</li>
                 <li>• <b>Elementarmathematik</b> (Elementary Mathematics)</li>
@@ -395,14 +387,14 @@
                   <td class="py-3 px-3">07.10.2026</td>
                   <td class="py-3 px-3">Grundlagen der Mikrobiologie</td>
                   <td class="py-3 px-3">Zellmorphologie & Rohmilchflora</td>
-                  <td class="py-3 px-3"><span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded text-xs">Bereit ✅</span></td>
+                  <td class="py-3 px-3"><span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded text-xs">Abgeschlossen ✅</span></td>
                 </tr>
-                <tr class="opacity-60">
-                  <td class="py-3 px-3 font-bold text-slate-500">03</td>
-                  <td class="py-3 px-3">Nächste Session</td>
+                <tr class="hover:bg-slate-800/40 cursor-pointer" onclick="showSection('day3')">
+                  <td class="py-3 px-3 font-bold text-amber-400">03</td>
+                  <td class="py-3 px-3">26.10.2026</td>
                   <td class="py-3 px-3">Physikalische Chemie</td>
                   <td class="py-3 px-3">Milchfettkügelchen & Homogenisierung</td>
-                  <td class="py-3 px-3"><span class="bg-slate-800 text-slate-400 px-2 py-0.5 rounded text-xs">Geplant ⏳</span></td>
+                  <td class="py-3 px-3"><span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded text-xs">Aktiv & Bereit ✅</span></td>
                 </tr>
               </tbody>
             </table>
@@ -419,32 +411,32 @@
           <p class="text-sm text-slate-400 mb-6">Wichtige deutsche Begriffe mit Artikel und Beispielsätzen.</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div class="p-3 bg-slate-900 border border-slate-800 rounded-xl">
-              <span class="text-xs text-blue-400 font-mono">die Milch</span>
-              <p class="text-sm font-bold text-white">milk</p>
-              <p class="text-xs text-slate-400 mt-1 italic">"Die Rohmilch wird vor der Verarbeitung gekühlt."</p>
+              <span class="text-xs text-amber-400 font-mono">das Milchfettkügelchen</span>
+              <p class="text-sm font-bold text-white">milk fat globule (MFG)</p>
+              <p class="text-xs text-slate-400 mt-1 italic">"Das Milchfettkügelchen hat einen Durchmesser von 3 bis 4 µm."</p>
             </div>
             <div class="p-3 bg-slate-900 border border-slate-800 rounded-xl">
-              <span class="text-xs text-amber-400 font-mono">das Fettkügelchen</span>
-              <p class="text-sm font-bold text-white">fat globule</p>
-              <p class="text-xs text-slate-400 mt-1 italic">"Die Fettkügelchen schwimmen an die Oberfläche."</p>
+              <span class="text-xs text-amber-400 font-mono">die Homogenisierung</span>
+              <p class="text-sm font-bold text-white">high-pressure homogenization</p>
+              <p class="text-xs text-slate-400 mt-1 italic">"Die Homogenisierung verhindert das Aufrahmen von Trinkmilch."</p>
+            </div>
+            <div class="p-3 bg-slate-900 border border-slate-800 rounded-xl">
+              <span class="text-xs text-rose-400 font-mono">die Lipolyse</span>
+              <p class="text-sm font-bold text-white">lipolysis / hydrolytic rancidity</p>
+              <p class="text-xs text-slate-400 mt-1 italic">"Lipolyse führt zur Freisetzung von freier Buttersäure."</p>
+            </div>
+            <div class="p-3 bg-slate-900 border border-slate-800 rounded-xl">
+              <span class="text-xs text-blue-400 font-mono">das Phospholipid</span>
+              <p class="text-sm font-bold text-white">phospholipid</p>
+              <p class="text-xs text-slate-400 mt-1 italic">"Phospholipide bilden die polare äußere Schicht der MFGM."</p>
             </div>
             <div class="p-3 bg-slate-900 border border-slate-800 rounded-xl">
               <span class="text-xs text-emerald-400 font-mono">das Kasein</span>
               <p class="text-sm font-bold text-white">casein</p>
-              <p class="text-xs text-slate-400 mt-1 italic">"Das Kasein fällt bei pH 4,6 aus."</p>
+              <p class="text-xs text-slate-400 mt-1 italic">"Kaseine adsorbieren an die neu geschaffene Fettoberfläche."</p>
             </div>
             <div class="p-3 bg-slate-900 border border-slate-800 rounded-xl">
-              <span class="text-xs text-sky-400 font-mono">die Laktose</span>
-              <p class="text-sm font-bold text-white">lactose</p>
-              <p class="text-xs text-slate-400 mt-1 italic">"Laktose ist der primäre Milchzucker."</p>
-            </div>
-            <div class="p-3 bg-slate-900 border border-slate-800 rounded-xl">
-              <span class="text-xs text-indigo-400 font-mono">das Bakterium (pl. Bakterien)</span>
-              <p class="text-sm font-bold text-white">bacterium (bacteria)</p>
-              <p class="text-xs text-slate-400 mt-1 italic">"Milchsäurebakterien wandeln Laktose in Milchsäure um."</p>
-            </div>
-            <div class="p-3 bg-slate-900 border border-slate-800 rounded-xl">
-              <span class="text-xs text-rose-400 font-mono">die Endospore</span>
+              <span class="text-xs text-indigo-400 font-mono">die Endospore</span>
               <p class="text-sm font-bold text-white">bacterial endospore</p>
               <p class="text-xs text-slate-400 mt-1 italic">"Endosporen überleben die normale Pasteurisierung."</p>
             </div>
@@ -456,81 +448,13 @@
   </div>
 
   <script>
-    const phaseData = [
-      {
-        title: "1. Die Emulsion (Öl-in-Wasser-System)",
-        badge: "0,1 bis 10 µm • Makrodispers",
-        badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
-        items: [
-          { label: "Hauptkomponente", val: "<b>Das Milchfett</b> (Triglyceride)", desc: "macht ca. 3,9 % der Vollmilch aus." },
-          { label: "Schutzhülle", val: "<b>Die MFGM</b> (Milchfettkügelchenmembran)", desc: "dreischichtige Phospholipid- und Glykoprotein-Hülle, verhindert spontanes Zusammenfließen (Koaleszenz)." },
-          { label: "Molkereiprozess", val: "<b>Entrahmung & Homogenisierung</b>", desc: "Zentrifugale Trennung von Rahm bei 55–65 °C; Hochdruckzerkleinerung (150–250 bar) verhindert das Aufrahmen." }
-        ],
-        rule: "Stokes'sches Gesetz: Da Milchfett leichter ist (0,93 g/cm³) als das Serum (1,036 g/cm³), steigen Fettkügelchen nach oben."
-      },
-      {
-        title: "2. Die kolloidale Dispersion (Proteine)",
-        badge: "50 bis 300 nm • Kolloiddispers",
-        badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
-        items: [
-          { label: "Hauptkomponente", val: "<b>Das Kasein</b> (Kaseinmizellen)", desc: "macht 80 % des Gesamteiweißes aus (αs1, αs2, β, κ-Kaseine)." },
-          { label: "Struktur", val: "<b>Submizellen & Calciumphosphat (CCP)</b>", desc: "κ-Kasein bildet eine hydrophile, haarartige Bürste an der Oberfläche, die die Mizelle sterisch stabilisiert." },
-          { label: "Molkereiprozess", val: "<b>Käseherstellung & Fermentation</b>", desc: "Spaltung von κ-Kasein durch Chymosin (Lab) oder Säuerung auf pH 4,6 führt zur Gelbildung (Käsebruch)." }
-        ],
-        rule: "Optik: Kaseinmizellen streuen das Licht (Tyndall-Effekt) und verleihen der Milch ihre schneeweiße Farbe!"
-      },
-      {
-        title: "3. Die echte Lösung (Moleküle & Ionen)",
-        badge: "< 1 nm • Molekulardispers",
-        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-        items: [
-          { label: "Hauptkomponenten", val: "<b>Laktose & Mineralsalze</b>", desc: "Milchzucker (4,7 %) sowie Na⁺, K⁺, Cl⁻, gelöstes Calcium und Citrate." },
-          { label: "Eigenschaft", val: "<b>Vollständig hydratisiert</b>", desc: "homogen im Wasser verteilt, keine Phasengrenze vorhanden." },
-          { label: "Molkereiprozess", val: "<b>Kryoskopie (Gefrierpunktmessung)</b>", desc: "Der Gefrierpunkt (-0,520 bis -0,540 °C) wird primär durch Laktose und Ionen erzeugt; dient der Detektion von Fremdwasserzusatz." }
-        ],
-        rule: "Qualitätskontrolle: Fremdwasser verdünnt die gelösten Ionen und lässt den Gefrierpunkt gegen 0 °C ansteigen."
-      }
-    ];
-
-    function setPhase(idx) {
-      for (let i = 0; i < 3; i++) {
-        const btn = document.getElementById(`tab-btn-${i}`);
-        if (i === idx) {
-          btn.className = "py-2 px-3 text-xs md:text-sm font-semibold rounded-lg bg-blue-600 text-white transition";
-        } else {
-          btn.className = "py-2 px-3 text-xs md:text-sm font-medium rounded-lg text-slate-400 hover:text-white transition";
-        }
-      }
-
-      const p = phaseData[idx];
-      const box = document.getElementById('phase-detail-box');
-      box.innerHTML = `
-        <div class="flex items-center justify-between">
-          <h4 class="text-base font-bold text-white">${p.title}</h4>
-          <span class="text-xs px-2.5 py-1 rounded-full border ${p.badgeColor} font-mono">${p.badge}</span>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-          ${p.items.map(item => `
-            <div class="p-3 bg-slate-950/70 border border-slate-800 rounded-xl space-y-1">
-              <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">${item.label}</span>
-              <p class="text-xs text-white">${item.val}</p>
-              <p class="text-[11px] text-slate-400 leading-relaxed">${item.desc}</p>
-            </div>
-          `).join('')}
-        </div>
-        <div class="p-3 rounded-xl bg-blue-950/40 border border-blue-500/20 text-xs text-blue-200">
-          💡 <b>Prüfungswissen:</b> ${p.rule}
-        </div>
-      `;
-    }
-
     function toggleAnswer(id) {
       const el = document.getElementById(`ans-${id}`);
-      el.classList.toggle('hidden');
+      if (el) el.classList.toggle('hidden');
     }
 
     function showSection(name) {
-      ['day1', 'day2', 'syllabus', 'log', 'vocab'].forEach(sec => {
+      ['day1', 'day2', 'day3', 'syllabus', 'log', 'vocab'].forEach(sec => {
         const secEl = document.getElementById(`section-${sec}`);
         if (secEl) secEl.classList.add('hidden');
         const navEl = document.getElementById(`nav-${sec}`);
@@ -540,14 +464,14 @@
       const targetSec = document.getElementById(`section-${name}`);
       if (targetSec) targetSec.classList.remove('hidden');
       const targetNav = document.getElementById(`nav-${name}`);
-      if (targetNav) targetNav.className = "w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium transition bg-blue-600 text-white flex items-center justify-between";
+      if (targetNav) targetNav.className = "w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium transition bg-amber-600 text-white flex items-center justify-between";
 
       // Scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Initialize Phase 0 on load
-    setPhase(0);
+    // Default view: Day 3
+    showSection('day3');
   </script>
 </body>
 </html>
